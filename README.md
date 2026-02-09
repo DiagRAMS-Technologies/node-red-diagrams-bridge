@@ -10,13 +10,20 @@ A Node-RED node to push your data to the DiagRAMS API.
 
 ## Getting started
 
-First of all, download the package. Then, import it in your Node-RED web interface.
+First of all,
+[download the package](https://github.com/DiagRAMS-Technologies/node-red-diagrams-bridge/releases)
+corresponding to the release you need. Then, import it in your Node-RED web
+interface.
 
-To do so, click on the hamburger menu on the right top of the screen, select "Manage Palette", select the "Install" tab, click on the upload icon and select the downloaded package.
+To do so, click on the hamburger menu on the right top of the screen, select
+"Manage Palette", select the "Install" tab, click on the upload icon and select
+the downloaded package.
 
 The DiagRAMS bridge node will be in your palette in the "function" category.
 
-To use it, just create an application in your DiagRAMS application and put it in the credentials. You will also need to provide the organisation identifier, your project code and the API base URL if running on premise.
+To use it, just create an application in your DiagRAMS application and put it in
+the credentials. You will also need to provide the organisation identifier, your
+project code and the API base URL if running on premise.
 
 ## Development
 
@@ -27,6 +34,7 @@ docker run -it -p 1880:1880 --name mynodered nodered/node-red
 ```
 
 Install dependencies:
+
 ```sh
 npm i
 ```

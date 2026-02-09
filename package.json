@@ -27,6 +27,9 @@
     "rebuild": "swc ./src -s -d dist -C jsc.target=es2022",
     "test": "node --run jest"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@eslint/js": "^9.30.1",
     "@swc/cli": "^0.7.8",
