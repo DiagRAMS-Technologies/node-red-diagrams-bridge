@@ -1,6 +1,6 @@
 {
   "name": "node-red-diagrams-bridge",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Push data to the DiagRAMS API with Node-RED",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
