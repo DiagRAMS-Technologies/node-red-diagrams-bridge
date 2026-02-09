@@ -1,6 +1,6 @@
 {
   "name": "node-red-diagrams-bridge",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Push data to the DiagRAMS API with Node-RED",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -25,8 +25,7 @@
     "prettier": "prettier --write 'src/**/*.ts'",
     "preversion": "node --run build && node --run lint && node --run test",
     "rebuild": "swc ./src -s -d dist -C jsc.target=es2022",
-    "test": "node --run jest",
-    "version": "node --run changelog"
+    "test": "node --run jest"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
