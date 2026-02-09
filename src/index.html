@@ -1,0 +1,67 @@
+<script type="text/javascript">
+  RED.nodes.registerType('diagrams-bridge', {
+    category: 'function',
+    color: '#7faedb',
+    icon: 'diagrams.svg',
+    labelStyle: {
+      align: 'right',
+    },
+    defaults: {
+      name: { value: 'DiagRAMS API' },
+      diagrams: { type: 'diagrams-credentials', required: true },
+      projectCode: {
+        required: true,
+        validate: RED.validators.regex(/[a-z0-9]+/),
+      },
+      organisationId: {
+        required: true,
+        validate: RED.validators.regex(
+          /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89AB][0-9a-f]{3}-[0-9a-f]{12}$/i,
+        ),
+      },
+      baseURL: {
+        required: true,
+        value: 'https://api.diagrams-technologies.com/v0',
+        validate: RED.validators.regex(/^https?:\/\//),
+      },
+    },
+    inputs: 1,
+    outputs: 0,
+    label: function () {
+      return this.name || 'diagrams-bridge';
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="diagrams-bridge">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-diagrams"
+      ><i class="fa fa-user"></i> DiagRAMS Credentials</label
+    >
+    <input type="text" id="node-input-diagrams" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-projectCode"
+      ><i class="fa fa-tag"></i> Project Code</label
+    >
+    <input type="text" id="node-input-projectCode" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-organisationId"
+      ><i class="fa fa-tag"></i> Organisation Id</label
+    >
+    <input type="text" id="node-input-organisationId" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-baseURL"><i class="fa fa-tag"></i> Base URL</label>
+    <input type="text" id="node-input-baseURL" />
+  </div>
+</script>
+
+<script type="text/html" data-help-name="diagrams-bridge">
+  <p>A simple node that push data to the DiagRAMS API</p>
+</script>
